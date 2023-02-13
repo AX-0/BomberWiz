@@ -1,1 +1,1 @@
-# Bomberman
+# BomberWiz
