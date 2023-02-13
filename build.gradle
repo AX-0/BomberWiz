@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+
+    id 'application'
+
+    id 'jacoco'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:28.0-jre'
+    implementation 'org.processing:core:3.3.7'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'bomberwiz.App'
+}
+
+build.finalizedBy run
